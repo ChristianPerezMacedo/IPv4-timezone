@@ -1,0 +1,24 @@
+{
+  "name": "ipv4-timezone",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc -p ./tsconfig.json",
+    "start": "node ./index.js",
+    "create:csv": "node ./filterOnlyCitiesWithMoreTimezones.js",
+    "create:json": "node ./transform.js",
+    "create": "npm run create:csv && npm run create:json",
+    "watch": "tsc -p ./tsconfig.json --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "city-timezones": "^1.2.1",
+    "countries-and-timezones": "^3.3.0",
+    "csvtojson": "^2.0.10",
+    "moment-timezone": "^0.5.34"
+  }
+}
